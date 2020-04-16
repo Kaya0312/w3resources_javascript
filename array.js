@@ -5,10 +5,11 @@
 // false
 // true
 
-function is_array() {
-    
+function is_array(data) {
+    return Array.isArray(data);
 }
-
+console.log(is_array('w3resource'));
+console.log(is_array([1, 2, 4, 0]));
 
 // 2. Write a JavaScript function to clone an array.
 // Test Data :
@@ -16,6 +17,12 @@ function is_array() {
 // console.log(array_Clone([1, 2, [4, 0]]));
 // [1, 2, 4, 0]
 // [1, 2, [4, 0]]
+
+function array_Clone(arr) {
+    return [].concat(arr);
+}
+console.log(array_Clone([1, 2, 4, 0]));
+console.log(array_Clone([1, 2, [4, 0]]));
 
 // 3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
 // Test Data :
