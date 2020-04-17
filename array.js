@@ -24,7 +24,8 @@ function array_Clone(arr) {
 console.log(array_Clone([1, 2, 4, 0]));
 console.log(array_Clone([1, 2, [4, 0]]));
 
-// 3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
+// 3. Write a JavaScript function to get the first element of an array. 
+//    Passing a parameter 'n' will return the first 'n' elements of the array.
 // Test Data :
 // console.log(first([7, 9, 0, -2]));
 // console.log(first([],3));
@@ -37,6 +38,7 @@ console.log(array_Clone([1, 2, [4, 0]]));
 // [7, 9, 0]
 // [7, 9, 0, -2]
 // []
+
 
 // 4. Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array.
 // Test Data :
@@ -55,15 +57,35 @@ console.log(array_Clone([1, 2, [4, 0]]));
 // "Red,Green,White,Black"
 // "Red+Green+White+Black"
 
-// 6. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
+function arrayJoin(arr) {
+    console.log(arr.join(','));
+    console.log(arr.join(','));
+    console.log(arr.join('+'));
+}
+const myColor = ["Red", "Green", "White", "Black"];
+arrayJoin(myColor);
+
+// 6. Write a JavaScript program which accept a number as input and insert dashes (-) 
+//    between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
 
 // 7. Write a JavaScript program to sort the items of an array.
 // Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 // Sample Output : -4,-3,1,2,3,5,6,7,8
 
+var arr1 = [ 3, 8, 7, 6, 5, -4, -3, 2, 1 ];
+arr1.sort(function(a, b) {
+    return a - b;
+});
+console.log(arr1);
+
 // 8. Write a JavaScript program to find the most frequent item of an array.
 // Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 // Sample Output : a ( 5 times )
+
+var arr8 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+for (var i=0; i<arr8.length; i++) {
+    console.log(arr8[i]);
+}
 
 // 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
 
