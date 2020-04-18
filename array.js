@@ -120,12 +120,14 @@ console.log("Q7. " + arr1);
 
 // 16. Find the leap years in a given range of years.
 
-
-// Divide by 4
-// Define which year is leap year
-
-
-
+function isLeapYear(year) {
+    if(year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+        console.log("Q16. " + year + ' is leap year');
+    } else {
+        console.log("Q16. " + year + ' is not leap year');
+    }
+}
+isLeapYear(2021);
 
 
 // 17. Write a JavaScript program to shuffle an array.
@@ -147,7 +149,8 @@ console.log("Q7. " + arr1);
 
 // 20. Write a JavaScript program to find duplicate values in a JavaScript array.
 
-// 21. Write a JavaScript program to flatten a nested (any depth) array. If you pass shallow, the array will only be flattened a single level.
+// 21. Write a JavaScript program to flatten a nested (any depth) array. 
+// If you pass shallow, the array will only be flattened a single level.
 // Sample Data :
 // console.log(flatten([1, [2], [3, [[4]]],[5,6]]));
 // [1, 2, 3, 4, 5, 6]
