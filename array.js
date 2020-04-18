@@ -8,8 +8,8 @@
 function is_array(data) {
     return Array.isArray(data);
 }
-console.log(is_array('w3resource'));
-console.log(is_array([1, 2, 4, 0]));
+console.log("Q1. " + is_array('w3resource'));
+console.log("Q1. " + is_array([1, 2, 4, 0]));
 
 // 2. Write a JavaScript function to clone an array.
 // Test Data :
@@ -21,8 +21,8 @@ console.log(is_array([1, 2, 4, 0]));
 function array_Clone(arr) {
     return [].concat(arr);
 }
-console.log(array_Clone([1, 2, 4, 0]));
-console.log(array_Clone([1, 2, [4, 0]]));
+console.log("Q2. " + array_Clone([1, 2, 4, 0]));
+console.log("Q2. " + array_Clone([1, 2, [4, 0]]));
 
 // 3. Write a JavaScript function to get the first element of an array. 
 //    Passing a parameter 'n' will return the first 'n' elements of the array.
@@ -58,9 +58,9 @@ console.log(array_Clone([1, 2, [4, 0]]));
 // "Red+Green+White+Black"
 
 function arrayJoin(arr) {
-    console.log(arr.join(','));
-    console.log(arr.join(','));
-    console.log(arr.join('+'));
+    console.log("Q5. " + arr.join(','));
+    console.log("Q5. " + arr.join(','));
+    console.log("Q5. " + arr.join('+'));
 }
 const myColor = ["Red", "Green", "White", "Black"];
 arrayJoin(myColor);
@@ -76,16 +76,12 @@ var arr1 = [ 3, 8, 7, 6, 5, -4, -3, 2, 1 ];
 arr1.sort(function(a, b) {
     return a - b;
 });
-console.log(arr1);
+console.log("Q7. " + arr1);
 
 // 8. Write a JavaScript program to find the most frequent item of an array.
 // Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 // Sample Output : a ( 5 times )
 
-var arr8 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
-for (var i=0; i<arr8.length; i++) {
-    console.log(arr8[i]);
-}
 
 // 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
 
@@ -124,6 +120,14 @@ for (var i=0; i<arr8.length; i++) {
 
 // 16. Find the leap years in a given range of years.
 
+
+// Divide by 4
+// Define which year is leap year
+
+
+
+
+
 // 17. Write a JavaScript program to shuffle an array.
 
 // 18. Write a JavaScript program to perform a binary search.
@@ -154,6 +158,16 @@ for (var i=0; i<arr8.length; i++) {
 // Sample Data :
 // console.log(union([1, 2, 3], [100, 2, 1, 10]));
 // [1, 2, 3, 10, 100]
+
+function union(arr1 = [], arr2 = []) {
+    var newArray = arr1.concat(arr2).sort((a,b) => a - b);
+
+    return newArray.filter((value, index, array) => {
+        return array.indexOf(value) === index;
+    });
+}
+
+console.log("Q22. " + union([1, 2, 3], [100, 2, 1, 10]));
 
 // 23. Write a JavaScript function to find the difference of two arrays.
 // Test Data :
