@@ -106,7 +106,22 @@ console.log("Q7. " + arr1);
 // Sample Screen :
 // add elements in an blank array
 
-// 14. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+// 14. Write a JavaScript program to remove duplicate items from an array 
+// (ignore case sensitivity).
+
+let array = [1,4,5,6,2,3,3,1,7,8,3,8,4];
+array.sort();
+let newArray = [];
+
+let len = array.length;
+
+for (let i = 0; i < len; i++) {
+    if (newArray.indexOf(array[i]) === -1) {
+        newArray.push(array[i]);
+    }
+}
+
+console.log("Q14. " + newArray);
 
 // 15. We have the following arrays :
 // color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
@@ -131,6 +146,21 @@ isLeapYear(2021);
 
 
 // 17. Write a JavaScript program to shuffle an array.
+
+var items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var shuffle = function(arr) {
+    let newPos, temp;
+
+    for(let i = items.length - 1; i > 0; i--) {
+        newPos = Math.floor(Math.random() * (i + 1));
+        temp = arr[i];
+        arr[i] = arr[newPos];
+        arr[newPos] = temp;
+    }
+    return arr;
+}
+console.log("Q17. " + shuffle(items));
+
 
 // 18. Write a JavaScript program to perform a binary search.
 // Note : A binary search or half-interval search algorithm finds the position of a specified input value within an array sorted by key value.
