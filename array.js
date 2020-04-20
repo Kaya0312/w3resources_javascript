@@ -101,6 +101,12 @@ console.log("Q7. " + arr1);
 // 11. Write a JavaScript program to find the sum of squares of a numeric vector.
 
 // 12. Write a JavaScript program to compute the sum and product of an array of integers.
+function sum(arr) {
+    console.log(arr.reduce())
+}
+
+var items = [1,4,6,8,2];
+console.log(sum(items));
 
 // 13. Write a JavaScript program to add items in an blank array and display the items.
 // Sample Screen :
@@ -178,6 +184,12 @@ console.log("Q17. " + shuffle(items));
 // [4, 5, 8, 10, 12, 13]
 
 // 20. Write a JavaScript program to find duplicate values in a JavaScript array.
+var arrays = [3,6,3,6,8,5,6,7,2,5,2];
+
+for (var i = 0; i < arrays.length; i++) {
+    var newArray = [];
+    
+}
 
 // 21. Write a JavaScript program to flatten a nested (any depth) array. 
 // If you pass shallow, the array will only be flattened a single level.
